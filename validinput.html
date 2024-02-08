@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            height: 50px;
+            width: 400px;
+            padding: 5px 10px;
+            outline: none;
+            border:  2px solid #333;
+            border-radius: 5px;
+        }
+        input:invalid{
+            border-color: red;
+            background: aqua;
+            animation: shake 0.2s 2;
+        }
+        @keyframes shake{
+            0%{transform:  translateX(4px)}
+            50%{transform:  translateX(-4px)}
+            100%{transform:  translateX(4px)}
+        }
+    </style>
+</head>
+<body>
+    <h3>How to detect Invalid Input?</h3>
+    <input type="text" placeholder="Enter Username" pattern="[a-z]*">
+</body>
+</html>
